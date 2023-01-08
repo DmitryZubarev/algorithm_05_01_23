@@ -50,9 +50,11 @@ def find_peaks(arr):
             else:
                 index = go_to_end_plateau(arr, index)
 
+        if pos[0] == 0:
+            pos.pop(0)
         for index in pos:
             peaks.append(arr[index])
     return Peaks(pos, peaks)
 
 
-print(find_peaks([1, 2, 5, 4, 3, 2, 3, 6, 4, 1, 2, 3, 3, 4, 5, 3, 2, 1, 2, 3, 5, 5, 4, 3]))
+print(find_peaks([3, 2, 3, 6, 4, 1, 2, 3, 2, 1, 2, 3]))
