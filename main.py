@@ -20,12 +20,6 @@ def go_up_forward(arr, index):
     return index
 
 
-def go_down_backward(arr, index):
-    while (arr[index] >= arr[index - 1]) and (index > 0):
-        index -= 1
-    return index
-
-
 def go_down_forward(arr, index):
     while (arr[index] >= arr[index + 1]) and (index < len(arr) - 2):
         index += 1
